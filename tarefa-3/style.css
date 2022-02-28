@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* ===== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: var(--text);
+  -webkit-font-smoothing: antialiased;
+
+  background: linear-gradient(gray, #c5c4c4);
+  color: white;
+}
+
+button, 
+input {
+  outline: none;
+  border: none;
+}
+
+
+/* ===== VARIABLES ========== */
+:root {
+
+  /* Colors */
+  --darkpurple: #1f0c22;
+  --purple: #621e6e;
+  --lightpurple: #342a89;
+  --blue: #2637db;
+
+  --mediumblue: #3f62ef;
+  --lightblue: #6cbffd;
+  --yellow: #fecd23;
+
+  /* Fonts */
+  --title: 'Press Start 2P', cursive;
+  --text: 'VT323', monospace;
+}
+
+
+/* ===== LAYOUT ========== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 95vw;
+  max-width: 50rem;
+  
+  padding: 1rem 1rem .5rem;
+  margin: .5rem auto;
+
+  border-radius: 8px;
+  background: linear-gradient(var(--darkpurple), var(--purple));
+}
+
+.title {
+  font-family: var(--title);
+  font-size: .9rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  height: 2rem;
+  padding: 0.75rem;
+
+  border-radius: 4px;
+  border: 1px solid white;
+}
+
+.icon-plane {
+  font-size: 6rem;
+}
+
+.icon-group, 
+.icon-futbol-o {
+  font-size: 5rem;
+}
+
+#section-one > p, 
+#section-two > p {
+  text-align: center;
+}
+
+
+/* ===== HEADER ========== */
+#header {
+  padding: .5rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+
+
+/* ===== MAIN ========== */
+
+
+
+/* ===== SECTION 1 ========== */
+#section-one {
+  font-size: 1.3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ===== SECTION 2 ========== */
+#section-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1.5rem .75rem;
+  gap: 2rem;
+
+  border-radius: 8px;
+  background: linear-gradient(var(--purple), var(--darkpurple));
+}
+
+#section-two > p {
+  font-size: 1.7rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  height: 21rem;
+  width: 10.5rem;
+  
+  border-radius: 8px;
+  background: linear-gradient(var(--blue), var(--lightpurple));
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 90%;
+  width: 90%;
+
+  background: linear-gradient(var(--mediumblue), var(--lightblue));
+}
+
+button {
+  padding: .75rem;
+  color: white;
+
+  font-family: var(--text);
+  font-size: 1.3rem;
+  
+  border-radius: 4px;
+  background-color: var(--darkpurple);
+}
+
+
+/* ===== FOOTER ========== */
+#footer {
+  padding-top: .75rem;
+  font-size: .75rem;
+}
+
+
+/* ===== MEDIA QUERRIES ========== */
+/* X-Small devices (portrait phones, less than 576px) */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  input {
+    width: 60vw;
+    max-width: 29rem;
+    margin: 0 auto;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .card-body {
+    align-items: center;
+  
+    height: 90%;
+    width: 90%;
+  
+    padding: 1rem .5rem .5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .container {
+    margin: 1rem auto;
+  }
+
+  .cards {
+    gap: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  button:hover {
+    background-color: var(--purple);
+    cursor: pointer;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+}
+

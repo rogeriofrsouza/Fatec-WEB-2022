@@ -8,15 +8,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: 1.5rem;
-  font-family: var(--text);
-  -webkit-font-smoothing: antialiased;
-
-  background: linear-gradient(gray, #c5c4c4);
-  color: white;
-}
-
 button, 
 input {
   outline: none;
@@ -26,7 +17,6 @@ input {
 
 /* ===== VARIABLES ========== */
 :root {
-
   /* Colors */
   --darkpurple: #1f0c22;
   --purple: #621e6e;
@@ -39,7 +29,18 @@ input {
 
   /* Fonts */
   --title: 'Press Start 2P', cursive;
-  --text: 'VT323', monospace;
+  --text: 'VT323', sans-serif;
+}
+
+
+/* ===== BASE ========== */
+body {
+  font-size: 1.6rem;
+  font-family: var(--text);
+  -webkit-font-smoothing: antialiased;
+
+  background: linear-gradient(gray, #c5c4c4);
+  color: white;
 }
 
 
@@ -49,13 +50,9 @@ input {
   flex-direction: column;
   align-items: center;
 
-  width: 95vw;
   max-width: 50rem;
-  
   padding: 1rem 1rem .5rem;
-  margin: .5rem auto;
 
-  border-radius: 8px;
   background: linear-gradient(var(--darkpurple), var(--purple));
 }
 
@@ -64,24 +61,15 @@ input {
   font-size: .9rem;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
 .section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
 
-input {
-  height: 2rem;
-  padding: 0.75rem;
-
-  border-radius: 4px;
-  border: 1px solid white;
+  width: 90vw;
+  max-width: 48rem;
+  text-align: center;
 }
 
 .icon-plane {
@@ -93,24 +81,23 @@ input {
   font-size: 5rem;
 }
 
-#section-one > p, 
-#section-two > p {
-  text-align: center;
-}
-
 
 /* ===== HEADER ========== */
 #header {
-  padding: .5rem;
-  margin-bottom: 1rem;
-
   font-size: 1.5rem;
+  text-align: center;
+  
+  margin-bottom: 1rem;
   color: var(--yellow);
 }
 
 
 /* ===== MAIN ========== */
-
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /* ===== SECTION 1 ========== */
@@ -146,13 +133,29 @@ form {
   gap: 1.5rem;
 }
 
+input {
+  height: 2rem;
+  padding: 0.75rem;
+
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1rem;
+
+  border-radius: 4px;
+  border: 1px solid var(--darkpurple);
+}
+
+input:focus {
+  border: none;
+  box-shadow: 4px 8px 16px var(--darkpurple);
+}
+
+/* --- Cards --- */
 .cards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
   gap: 1rem;
 }
 
@@ -162,11 +165,16 @@ form {
   justify-content: center;
   align-items: center;
   
-  height: 21rem;
-  width: 10.5rem;
+  height: 22rem;
+  width: 11rem;
   
   border-radius: 8px;
   background: linear-gradient(var(--blue), var(--lightpurple));
+  transition: 0.3s all ease;
+}
+
+.card-title {
+  font-size: 1.8rem;
 }
 
 .card-body {
@@ -182,7 +190,7 @@ form {
 }
 
 button {
-  padding: .75rem;
+  padding: .5rem;
   color: white;
 
   font-family: var(--text);
@@ -195,17 +203,21 @@ button {
 
 /* ===== FOOTER ========== */
 #footer {
-  padding-top: .75rem;
-  font-size: .75rem;
+  padding-top: .5rem;
+  font-size: 1rem;
 }
 
 
 /* ===== MEDIA QUERRIES ========== */
-/* X-Small devices (portrait phones, less than 576px) */
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+  .container {
+    width: 95vw;
+    margin: .5rem auto;
+    border-radius: 8px;
+  }
+
   input {
     width: 60vw;
     max-width: 29rem;
@@ -215,7 +227,13 @@ button {
   .cards {
     flex-direction: row;
     justify-content: center;
+
     gap: 1rem;
+    width: 90%;
+  }
+
+  .card {
+    flex: 0 0 33%;
   }
 
   .card-body {
@@ -226,6 +244,10 @@ button {
   
     padding: 1rem .5rem .5rem;
   }
+
+  button {
+    font-size: 1.4rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -235,7 +257,12 @@ button {
   }
 
   .cards {
-    gap: 2rem;
+    gap: 3rem;
+  }
+
+  .card {
+    max-height: 22rem;
+    max-width: 11rem;
   }
 }
 
@@ -244,6 +271,10 @@ button {
   button:hover {
     background-color: var(--purple);
     cursor: pointer;
+  }
+
+  .card:hover {
+    margin-top: -1rem;
   }
 }
 

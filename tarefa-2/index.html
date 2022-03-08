@@ -1,32 +1,24 @@
-<!--
-- Usar display flex.
-- Usar CSS externo.
-- Ser responsivo conforme as imagens.
-- Tentar fazer o mais parecido possível com as imagens: assets/tela1.png e assets/tela2.png
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarefa 2</title>
 
     <!-- Favico -->
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://fatecitu.edu.br/blog/wp-content/uploads/2021/11/favicon.png" type="image/x-icon" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fonts/style.css">
   </head>
 
   <body>
     <div class="container">
 
       <!-- ========== HEADER ==========-->
-      <header>
-        <h1>Games Lovers Enquete</h1>
-      </header>
+      <header id="header" class="title">Games Lovers Enquete</header>
     
 
       <!-- ========== MAIN ==========-->
@@ -43,9 +35,9 @@
     
         <!-- Section 2 -->
         <section id="section-two" class="section">
-          <h3>Digite os seus dados e escolha entre os três finalistas</h3>
+          <p>Digite os seus dados e escolha entre os três finalistas!</p>
     
-          <form action="">
+          <form>
             <input type="text" id="" placeholder="Digite seu nome" />
             <input type="email" id="" placeholder="Digite seu email" />
           </form>
@@ -53,29 +45,34 @@
           <!-- Cards -->
           <div class="cards">
             <div class="card">
-              <h3></h3>
-              <img src="" alt="">
-              <button></button>
+              <div class="card-body">
+                <p class="card-title">Esportes</p>
+                <i class="icon-futbol-o"></i>
+                <button>Votar</button>
+              </div>
             </div>
     
             <div class="card">
-              <h3></h3>
-              <img src="" alt="">
-              <button></button>
+              <div class="card-body">
+                <p class="card-title">Simulação</p>
+                <i class="icon-plane"></i>
+                <button>Votar</button>
+              </div>
             </div>
     
             <div class="card">
-              <h3></h3>
-              <img src="" alt="">
-              <button></button>
+              <div class="card-body">
+                <p class="card-title">Estratégia</p>
+                <i class="icon-group"></i>
+                <button>Votar</button>
+              </div>
             </div>
           </div>
         </section>
       </main>
-    
 
       <!-- ========== FOOTER ==========-->
-      <footer class="center">&copy;Desenvolvido por GameTechLover</footer>
+      <footer id="footer" class="center">&copy;Desenvolvido por GameTechLover</footer>
     </div>
   </body>
 </html>

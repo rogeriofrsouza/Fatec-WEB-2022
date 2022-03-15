@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora Simples</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+    <div class="container">
+
+      <!-- ========== CALCULADORA ========== -->
+      <div class="calculadora">
+        <header><h2>Calculadora Simples</h2></header>
+
+        <input type="number" placeholder="Digite um número" id="num1">
+
+        <input type="number" placeholder="Digite outro número" id="num2">
+
+        <div class="operacoes">
+          <button onclick="calcular('+')">+</button>
+          <button onclick="calcular('-')">-</button>
+          <button onclick="calcular('*')">*</button>
+          <button onclick="calcular('/')">/</button>
+        </div>
+
+        <input type="text" placeholder="Resultado" id="output" readonly>
+      </div>
+
+      <!-- ========== HISTORY ========== -->
+      <div class="history">
+        <h3>Histórico de operações</h3>
+
+        <div id="history"></div>
+      </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>&copy;Rogério Ferreira</footer>
     
     <!-- JS -->
     <script src="main.js"></script>

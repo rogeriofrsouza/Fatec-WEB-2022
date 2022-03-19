@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 4</title>
+
+    <!-- Favico -->
+    <link rel="shortcut icon" href="https://fatecitu.edu.br/blog/wp-content/uploads/2021/11/favicon.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container dark">
+
+      <!-- ========== HEADER ==========-->
+      <header class="header">Turn the lights on!</header>
+    
+      <!-- ========== MAIN ==========-->
+      <img class="lamp show" src="assets/imgs/lamp-off-1.png" alt="Lâmpada 1 desligada">
+      <img class="lamp show" src="assets/imgs/lamp-off-2.png" alt="Lâmpada 2 desligada">
+      <img class="lamp show" src="assets/imgs/lamp-off-3.png" alt="Lâmpada 3 desligada">
+    
+      <img class="lamp hide" src="assets/imgs/lamp-on-1.png" alt="Lâmpada 1 ligada">
+      <img class="lamp hide" src="assets/imgs/lamp-on-2.png" alt="Lâmpada 2 ligada">
+      <img class="lamp hide" src="assets/imgs/lamp-on-3.png" alt="Lâmpada 3 ligada">
+    
+      <!-- Rounded switch -->
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round" onclick="switchOnLamps()"></span>
+      </label>
+      
+      <!-- ========== FOOTER ==========-->
+      <footer id="footer" class="center">&copy;Rogério Ferreira</footer>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

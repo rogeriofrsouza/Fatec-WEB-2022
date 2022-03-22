@@ -24,5 +24,4 @@ function switchOnLamps() {
   } else {
     header.className = 'header'
   }
-
 }

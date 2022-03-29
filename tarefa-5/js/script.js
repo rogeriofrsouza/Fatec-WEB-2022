@@ -26,11 +26,11 @@ const swiper = new Swiper('.swiper', {
 
 /* ========== CALCLAR ========== */
 function calcular() {
-  let nome = document.getElementById('output');
-  let phone = document.getElementById('phone');
-  let email = ducment.getElementById('email');
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let email = document.getElementById('email').value;
   let output = document.getElementById('output');
-
+  let precoFinal = 0; 
 
   let prods = [
     { id: 1, name: "Bife com batata", price: 30.0 },
@@ -42,12 +42,32 @@ function calcular() {
   ];
 
   let quantities = document.getElementsByName("quantity");
-    
+  console.log(quantities);
+  console.log(name);
+
+  output.innerHTML = `<p>Caro(a) <b>${name}, </p></br></br>`
+  output.innerHTML += `<p>Seguem os dados do seu pedido:</p></br>`
+  output.innerHTML += `<ul>`
+  
   for (let input of quantities) {
-    output.innerHTML += ` Produto: ${prods[input.id-1].name} - Preço: ${prods[input.id-1].price} - Quantidade: ${input.value} </br>`
+    if (input.value > 0) {
+      precoFinal += (input.value*prods[input.id-1].price);
+
+      output.innerHTML += `<li>
+        Prato: ${prods[input.id-1].name} 
+        - Preço unitário: ${prods[input.id-1].price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} 
+        - Quantidade: ${input.value} 
+        - Total: ${(input.value*prods[input.id-1].price).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+      </li></br>`;
+    }
   }
 
-  
+  output.innerHTML += `</ul></br>`;
+  output.innerHTML += `<p>Preço final: <b>${precoFinal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</b></p></br>`;
+  output.innerHTML += `
+    📞 ${phone}</br> 
+    📧 ${email}
+  `
 }
 
 /* ========== MASK ========== */

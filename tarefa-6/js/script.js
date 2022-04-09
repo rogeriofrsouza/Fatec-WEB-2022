@@ -17,7 +17,7 @@ function calcular() {
 
   let quantities = document.getElementsByName("quantity");
 
-  output.innerHTML = `<p>Caro(a) <b>${name}, </p></br></br>`
+  output.innerHTML = `<p>Caro(a) <b>${name}, </p>`
   output.innerHTML += `<p>Seguem os dados do seu pedido:</p></br>`
   output.innerHTML += `<ul>`
 
@@ -46,8 +46,30 @@ function calcular() {
   }
 }
 
+window.addEventListener('keyup', (event) => {
+  if (event.key == 'Enter') {
+    event.preventDefault();
+    document.querySelector('.btn-primary').click();
+  }
+});
+
+
 /* ========== MASK ========== */
 document.getElementById('phone').addEventListener('input', event => {
   let x = event.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
   event.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
 });
+
+
+/* ========== TOAST ========== */
+let toastTrigger = document.querySelectorAll('.liveToastBtn');
+let toastLiveExample = document.getElementById('liveToast');
+
+if (toastTrigger) {
+  for (let item of toastTrigger) {
+    item.addEventListener('click', () => {
+      let toast = new bootstrap.Toast(toastLiveExample);
+      toast.show()
+    });
+  }
+}

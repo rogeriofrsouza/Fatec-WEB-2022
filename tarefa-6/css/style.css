@@ -22,24 +22,13 @@ body {
 
 
 /* ===== LAYOUT ========== */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.minus, 
+.plus {
+  height: 39px !important;
+}
 
-  max-width: 60rem;
-
-  gap: 2rem;
-  padding: 2rem;
-  margin: 1rem auto;
-  margin-bottom: 2rem;
-
-  color: black;
-
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
+.dados-pessoais {
+  width: 100%;
 }
 
 
@@ -56,11 +45,11 @@ body {
 
 /* ===== CAROUSEL ========== */
 #carouselExampleCaptions {
-  height: 30rem, !important;
+  height: 20rem, !important;
 }
 
 img {
-  height: 30rem;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -71,6 +60,12 @@ img {
 .carousel-control-next:hover, 
 .carousel-control-prev:hover {
   background-color: transparent !important;
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+  width: 3rem !important;
+  height: 3rem !important;
 }
 
 
@@ -86,8 +81,7 @@ img {
   flex-direction: column;
   justify-content: space-evenly;
 
-  min-width: 14rem;
-  width: 27.5%;
+  width: 14rem !important;
   height: 30rem;
 
   padding: 0.5rem;
@@ -97,48 +91,7 @@ img {
 }
 
 .card > img {
-  height: 70%;
-}
-
-
-/* ===== DADOS ========== */
-#dados-pessoais {
-  min-height: 25rem;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-input[type='text'] {
-  width: 100%;
-  height: 3rem;
-
-  padding: 1rem;
-  font-size: 1.1rem;
-  border-radius: 4px;
-}
-
-input:focus {
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-button {
-  padding: 1rem;
-  color: white;
-
-  font-size: 1.1rem;
-  cursor: pointer;
-
-  border-radius: 8px;
-  background-color: #0062cc;
-}
-
-button:hover {
-  background-color: #014b9a;
-}
-
-#output {
-  align-self: flex-start;
-  margin-top: 2rem;
-  font-size: 1.1rem;
+  height: 17.5rem;
 }
 
 
@@ -150,14 +103,15 @@ button:hover {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .dados-pessoais {
+    width: 90%;
+    max-width: 54rem;
+    margin: 0 auto;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  input[type='text'] {
-    width: 85%;
-  }
-
   .navbar-brand {
     margin-right: 2rem !important;
   }

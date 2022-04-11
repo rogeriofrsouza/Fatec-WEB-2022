@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 0;
+}
+
 button {
   outline: none;
   border: none;
@@ -15,26 +19,23 @@ button {
 :root {
   font-size: 100%;
 
-  --blue: #153e80;
-  --red: #5a0707;
-  --dark-gray-alt: #2c2c2c;
-  --dark-gray: #4e4d4d;
-  --gray: #817f7f;
-  --white: #fafafa;
+  --title: #F3D3BD;
+  --body: #333333;
+  --main: #5E5E5E;
+  --link: #FCFAF9;
+  --link-hover-background: #333333;
 }
 
 
 /* ===== BASE ========== */
 html,
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
   font-size: 1.3rem;
-
-  color: var(--white);
-  background: linear-gradient(var(--blue), var(--red));
+  background-color: var(--body);
 }
 
 
@@ -48,10 +49,9 @@ body {
 
 /* ===== HEADER ========== */
 #header {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 2rem;
+  color: var(--title);
+  text-align: center;
+  margin: 2rem 0;
 }
 
 
@@ -62,76 +62,51 @@ body {
   align-items: center;
 
   margin: 1rem auto;
+  padding: 1rem;
 
   max-width: 50rem;
-  min-height: 35rem;
+  min-height: 30rem;
 
-  border: 1px solid var(--white);
-  border-radius: .5rem;
-
-  background-color: var(--dark-gray);
-  box-shadow: 8px 8px 16px var(--gray);
+  border-radius: 8px;
+  background-color: var(--main);
+  box-shadow: 8px 8px 16px rgba(243, 211, 189, 0.5);
 }
 
-.cards {
+.tasks {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
 
   width: 100%;
-
-  padding: .5rem;
+  gap: 1rem;
 }
 
-.card {
-  height: 25rem;
-  width: 40%;
-
-  color: var(--dark-gray-alt);
-
-  border-radius: 8px;
-  background-color: var(--white);
-}
-
-.card-title {
-  padding: .75rem;
-  text-align: center;
-  border-bottom: 1px solid var(--dark-gray);
-}
-
-.card-body {
+.task-item {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  height: 85%;
-  padding: 1rem;
 }
 
-.button {
-  align-self: center;
-  color: var(--white);
-  font-size: 1.2rem;
-
-  padding: 1rem;
-  border-radius: 8px;
-  background: linear-gradient(var(--blue), var(--red));
-}
-
-a {
-  color: blue;
+.link {
   text-decoration: none;
+  color: var(--link);
+
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  padding: 1rem;
+  transition: .3s all ease;
 }
 
-button > a {
-  color: var(--white);
+.link:hover {
+  background-color: var(--link-hover-background);
+  border-radius: 8px;
 }
 
 
 /* ===== FOOTER ========== */
 #footer {
-  display: flex;
-  justify-content: center;
+  color: var(--link);
+  text-align: center;
 
   margin-top: 3rem;
+  font-weight: 500;
 }

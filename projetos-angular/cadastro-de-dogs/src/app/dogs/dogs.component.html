@@ -1,0 +1,80 @@
+<div class="container">
+  <h4 class="px-3 mt-4">Encontre um amigo próximo de você!</h4>
+
+  <!-- ========== LIST ========== -->
+  <div class="list-group mt-4 mb-4 shadow">
+    <a 
+      *ngFor="let dog of dogs" 
+      class="list-group-item d-flex justify-content-between align-items-center" 
+    >
+      <div class="name" (click)="onSelect(dog)" data-bs-toggle="modal" data-bs-target="#modal">
+        🐶 <span class="mx-2 dog-name">{{ dog.nome }}</span>
+      </div>
+
+      <div class="icons">
+        <img 
+          class="icon" 
+          src="assets/edit-icon.png" 
+          alt="Editar" 
+          (click)="editar(dog)" 
+          data-bs-toggle="modal" 
+          data-bs-target="#modal" 
+        />
+        <img class="icon" src="assets/delete-icon.png" alt="Remover" (click)="remover(dog.id)" />
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ========== MODAL ========== -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">🐾 Detalhes Doguinho</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" *ngIf="selectedDog">
+        <!-- Nome & Idade -->
+        <div class="row text-center">
+            <h5>{{ selectedDog.nome }}, {{ selectedDog.idade }} anos</h5>
+        </div>
+
+        <!-- Imagem -->
+        <div class="row justify-content-center">
+          <img [src]="selectedDog.imagem" alt="Doguinho" class="img-thumbnail shadow" />
+        </div>
+
+        <div *ngIf="read">
+          <div class="text-italic mt-4 text-center">"{{ selectedDog.descricao }}"</div>
+        </div>
+
+        <div *ngIf="edit">
+          <!-- Forms -->
+          <form>
+            <label for="dog-name" class="form-label mt-3">Nome: </label>
+            <input id="dog-name" name="dog-name" class="form-control" [(ngModel)]="selectedDog.nome">
+  
+            <label for="dog-idade" class="form-label mt-3">Idade: </label>
+            <input type="number" id="dog-idade" name="dog-idade" class="form-control" [(ngModel)]="selectedDog.idade">
+  
+            <label for="dog-descricao" class="form-label mt-3">Descrição: </label>
+            <input id="dog-descricao" name="dog-descricao" class="form-control" [(ngModel)]="selectedDog.descricao">
+          </form>
+        </div>
+
+        <h5 class="mt-4 text-center">
+          📍 <strong>Localização: </strong>
+          <span class="badge bg-success">{{ selectedDog.localizacao }}</span>
+        </h5>
+      </div>
+
+      <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-primary" (click)="adotar()">Adotar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

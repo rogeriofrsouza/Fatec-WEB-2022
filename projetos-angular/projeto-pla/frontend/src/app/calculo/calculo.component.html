@@ -1,0 +1,100 @@
+<div class="container-fluid bg-neutral-7 mt-5 p-4">
+  <div class="row">
+    <form [formGroup]="formGroup">
+      <!-- Lucro -->
+      <div class="row">
+        <h3 class="ff-poppins fw-600 brand-1">Lucro</h3>
+        <p class="ff-dm-sans fs-16 neutral-2">Valor do lucro (R$) obtido na venda de cada produto.</p>
+        <div class="form-group col-md-3">
+          <label for="profit1" class="fs-14 neutral-2 ff-dm-sans">Produto 1</label>
+          <input type="number" class="form-control" id="profit1" min="0" formControlName="profit1" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="profit2" class="fs-14 neutral-2 ff-dm-sans">Produto 2</label>
+          <input type="number" class="form-control" id="profit2" min="0" formControlName="profit2" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="profit3" class="fs-14 neutral-2 ff-dm-sans">Produto 3</label>
+          <input type="number" class="form-control" id="profit3" min="0" formControlName="profit3" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="profit4" class="fs-14 neutral-2 ff-dm-sans">Produto 4</label>
+          <input type="number" class="form-control" id="profit4" min="0" formControlName="profit4" />
+        </div>
+      </div>
+
+      <!-- Material -->
+      <div class="row mt-5">
+        <h3 class="ff-poppins fw-600 brand-1">Material</h3>
+        <p class="ff-dm-sans fs-16 neutral-2">Quantidade de material (Kg) utilizado na produção de cada unidade.</p>
+        <div class="form-group col-md-3">
+          <label for="material1" class="neutral-2 ff-dm-sans">Produto 1</label>
+          <input type="number" class="form-control" id="material1" min="0" formControlName="material1" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="material2" class="neutral-2 ff-dm-sans">Produto 2</label>
+          <input type="number" class="form-control" id="material2" min="0" formControlName="material2" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="material3" class="neutral-2 ff-dm-sans">Produto 3</label>
+          <input type="number" class="form-control" id="material3" min="0" formControlName="material3" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="material4" class="neutral-2 ff-dm-sans">Produto 4</label>
+          <input type="number" class="form-control" id="material4" min="0" formControlName="material4" />
+        </div>
+      </div>
+      
+      <!-- Horas -->
+      <div class="row mt-5">
+        <h3 class="ff-poppins fw-600 brand-1">Horas de trabalho</h3>
+        <p class="ff-dm-sans fs-16 neutral-2">Quantidade de horas necessárias para a produção de cada produto.</p>
+        <div class="form-group col-md-3">
+          <label for="hours1" class="fs-14 neutral-2 ff-dm-sans">Produto 1</label>
+          <input type="number" class="form-control" id="hours1" min="0" formControlName="hours1" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hours2" class="fs-14 neutral-2 ff-dm-sans">Produto 2</label>
+          <input type="number" class="form-control" id="hours2" min="0" formControlName="hours2" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hours3" class="fs-14 neutral-2 ff-dm-sans">Produto 3</label>
+          <input type="number" class="form-control" id="hours3" min="0" formControlName="hours3" />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hours4" class="fs-14 neutral-2 ff-dm-sans">Produto 4</label>
+          <input type="number" class="form-control" id="hours4" min="0" formControlName="hours4" />
+        </div>
+      </div>
+
+      <!-- Restrições -->
+      <div class="row mt-5">
+        <h3 class="ff-poppins fw-600 brand-1">Restrições</h3>
+        <p class="ff-dm-sans fs-16 neutral-2">Restrições ou limites para a produção.</p>
+        <div class="form-group col-md-6">
+          <label for="totalMaterial" class="fs-14 neutral-2 ff-dm-sans">Material disponível (Kg)</label>
+          <input #totalMaterial type="number" class="form-control" id="totalMaterial" min="0" formControlName="totalMaterial" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="totalHours" class="fs-14 neutral-2 ff-dm-sans">Horas disponíveis no mês</label>
+          <input #totalHours type="number" class="form-control" id="totalHours" min="0" formControlName="totalHours" />
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="d-flex mt-4 gap-2">
+        <button class="btn btn-success mt-4" data-bs-toggle="modal" data-bs-target="#respostaModal" (click)="calcular()">Calcular</button>
+        <button class="btn btn-danger mt-4" (click)="limpar()">Limpar</button>       
+        <button class="btn btn-secondary mt-4" routerLink="">Voltar</button>       
+      </div>
+    </form>  
+  </div>
+  
+  <!-- Modal: Resposta -->
+  <app-resultado #resultado [resposta]="resposta"></app-resultado>
+</div>
+
+<div class="blank bg-neutral-6"></div>
+
+<!-- Footer -->
+<app-footer></app-footer>

@@ -1,0 +1,242 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/fonts/style.css';
+
+/* Variables */
+:root {
+  --brand-1: #005152;
+  --brand-1-80: hsl(181, 100%, 16%, 80%);
+  --brand-1-60: hsl(181, 100%, 16%, 60%);
+  --brand-1-40: hsl(181, 100%, 16%, 40%);
+  --brand-1-20: hsl(181, 100%, 16%, 20%);
+  --brand-2: #a93800;
+  --brand-2-80: hsl(20, 100%, 33%, 80%);
+  --brand-2-60: hsl(20, 100%, 33%, 60%);
+  --brand-2-40: hsl(20, 100%, 33%, 40%);
+  --brand-2-20: hsl(20, 100%, 33%, 20%);
+  --brand-3: #ff8749;
+  --brand-3-80: hsl(20, 100%, 64%, 80%);
+  --brand-3-60: hsl(20, 100%, 64%, 60%);
+  --brand-3-40: hsl(20, 100%, 64%, 40%);
+  --brand-3-20: hsl(20, 100%, 64%, 20%);
+  --neutral-1: #23272A;
+  --neutral-2: #484D50;
+  --neutral-3: #717679;
+  --neutral-4: #9DA1A5;
+  --neutral-5: #CBD0D4;
+  --neutral-6: #FAFAFA;
+  --neutral-7: #FFFFFF;
+  --font-1: 'Poppins', sans-serif;
+  --font-2: 'DM Sans', sans-serif;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Base */
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: var(--neutral-6);
+}
+
+button {
+  font-family: var(--font-1);
+  font-size: 14px !important;
+  color: var(--neutral-7);
+}
+
+.table {
+  border-top: 1px solid #dee2e6;
+}
+
+/* Colors */
+.brand-1 {
+  color: var(--brand-1) !important;
+}
+
+.brand-2 {
+  color: var(--brand-2) !important;
+}
+
+.brand-3 {
+  color: var(--brand-3) !important;
+}
+
+.neutral-1 {
+  color: var(--neutral-1) !important;
+}
+
+.neutral-2 {
+  color: var(--neutral-2) !important;
+}
+
+.neutral-3 {
+  color: var(--neutral-3) !important;
+}
+
+.neutral-4 {
+  color: var(--neutral-4) !important;
+}
+
+.neutral-5 {
+  color: var(--neutral-5) !important;
+}
+
+.neutral-6 {
+  color: var(--neutral-6) !important;
+}
+
+.neutral-7 {
+  color: var(--neutral-7) !important;
+}
+
+/* Backgrounds */
+.bg-brand-1 {
+  background-color: var(--brand-1);
+}
+
+.bg-brand-1-80 {
+  background-color: var(--brand-1-80);
+}
+
+.bg-brand-1-60 {
+  background-color: var(--brand-1-60);
+}
+
+.bg-brand-1-40 {
+  background-color: var(--brand-1-40);
+}
+
+.bg-brand-1-20 {
+  background-color: var(--brand-1-20);
+}
+
+.bg-brand-2 {
+  background-color: var(--brand-2);
+}
+
+.bg-brand-2-80 {
+  background-color: var(--brand-2-80);
+}
+
+.bg-brand-2-60 {
+  background-color: var(--brand-2-60);
+}
+
+.bg-brand-2-40 {
+  background-color: var(--brand-2-40);
+}
+
+.bg-brand-2-20 {
+  background-color: var(--brand-2-20);
+}
+
+.bg-brand-3 {
+  background-color: var(--brand-3);
+}
+
+.bg-brand-3-80 {
+  background-color: var(--brand-3-80);
+}
+
+.bg-brand-3-60 {
+  background-color: var(--brand-3-60);
+}
+
+.bg-brand-3-40 {
+  background-color: var(--brand-3-40);
+}
+
+.bg-brand-3-20 {
+  background-color: var(--brand-3-20);
+}
+
+.bg-neutral-1 {
+  background-color: var(--neutral-1);
+}
+
+.bg-neutral-2 {
+  background-color: var(--neutral-2);
+}
+
+.bg-neutral-3 {
+  background-color: var(--neutral-3);
+}
+
+.bg-neutral-4 {
+  background-color: var(--neutral-4);
+}
+
+.bg-neutral-5 {
+  background-color: var(--neutral-5);
+}
+
+.bg-neutral-6 {
+  background-color: var(--neutral-6);
+}
+
+.bg-neutral-7 {
+  background-color: var(--neutral-7);
+}
+
+/* Fonts */
+.ff-poppins {
+  font-family: var(--font-1) !important;
+}
+
+.ff-dm-sans {
+  font-family: var(--font-2) !important;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.fs-24 {
+  font-size: 24px !important;
+}
+
+.fs-32 {
+  font-size: 32px !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+/* Other */
+.hg-100p {
+  height: 100%;
+}

@@ -1,0 +1,22 @@
+form {
+  text-align: center;
+}
+
+.form-group {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.blank {
+  height: 3rem;
+}
+
+@media (min-width: 767px) {
+  form {
+    text-align: left;
+  }
+
+  .form-group {
+    margin-top: 0rem;
+  }
+}

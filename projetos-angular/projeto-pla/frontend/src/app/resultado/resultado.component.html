@@ -1,0 +1,53 @@
+<div class="modal fade" id="respostaModal" tabindex="-1" aria-labelledby="respostaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <div *ngIf="resposta">
+          <div class="text-center">
+            <h3 class="ff-poppins fw-600 brand-1">Lucro máximo: {{ resposta.result | currency }}</h3>
+            <p class="ff-dm-sans fs-16 neutral-2 text-center">Este lucro será atingido produzindo as seguintes quantidades de cada produto.</p>
+          </div>
+          <table class="table table-hover text-center mt-5">
+            <thead class="ff-poppins neutral-1">
+              <tr>
+                <td>Produto 1</td>
+                <td>Produto 2</td>
+                <td>Produto 3</td>
+                <td>Produto 4</td>
+              </tr>
+            </thead>
+            <tbody class="ff-dm-sans neutral-2">
+              <tr>
+                <td>{{ resposta.x1 }}</td>
+                <td>{{ resposta.x2 }}</td>
+                <td>{{ resposta.x3 }}</td>
+                <td>{{ resposta.x4 }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="ff-dm-sans neutral-2 text-left mt-5">
+            <div class="d-flex align-items-center gap-2">
+              <i class="icon-check-circle brand-1"></i>
+              <span>Quantidade total de material disponível: {{ totalMaterial }} Kg</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="icon-check-circle brand-1"></i>
+              <span>Total de horas de trabalho: {{ totalHours }}</span>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn btn-secondary neutral-7" data-bs-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

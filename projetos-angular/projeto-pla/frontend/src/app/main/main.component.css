@@ -1,0 +1,33 @@
+.btn.bg-brand-1:hover {
+  background-color: var(--brand-1-40) !important;
+}
+
+.gif-delivery-3 {
+  display: none;
+}
+
+.text {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-bottom: 0rem !important;
+  }
+
+  .gif-delivery-3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-fluid {
+    max-width: 590px !important;
+    max-height: 442px !important;
+  }
+}

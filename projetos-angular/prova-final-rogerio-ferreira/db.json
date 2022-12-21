@@ -1,0 +1,28 @@
+{
+    "carros": [
+        {
+          "codigo": 1,
+          "modelo": "Corsa Sedan",
+          "preco": "15.000",
+          "anoFabricacao": "2000-08-23"
+        },
+        {
+          "codigo": 2,
+          "modelo": "Celta",
+          "preco": "19.000",
+          "anoFabricacao": "2004-03-15"
+        },
+        {
+          "codigo": 3,
+          "modelo": "Uno",
+          "preco": "9.000",
+          "anoFabricacao": "1998-06-02"
+        },
+        {
+          "codigo": 4,
+          "modelo": "Corsa Sedan",
+          "preco": "15.000",
+          "anoFabricacao": "2000-08-23"
+        }
+      ]
+}

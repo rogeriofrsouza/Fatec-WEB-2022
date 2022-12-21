@@ -1,0 +1,50 @@
+html, body {
+  height: 100%;
+}
+
+.list-group {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.name, .icon {
+  cursor: pointer;
+}
+
+.name:hover {
+  font-weight: bold;
+}
+
+.icons {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.list-group-item:hover .icons {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.icon:hover {
+  transition: .5s;
+  opacity: .5;
+}

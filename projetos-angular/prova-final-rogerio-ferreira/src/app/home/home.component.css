@@ -1,0 +1,28 @@
+.gif-car {
+    display: none;
+    height: auto;
+    max-width: 570px;
+}
+
+.text {
+    text-align: center;
+}
+
+.buttons {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .gif-car {
+        display: block;
+    }
+
+    .text {
+        text-align: start;
+    }
+
+    .buttons {
+        justify-content: start;
+    }
+    
+}

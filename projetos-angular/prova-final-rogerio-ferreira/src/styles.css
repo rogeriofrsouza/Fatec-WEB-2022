@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.container-principal {
+    max-width: 35rem;
+}
+
+@media (min-width: 576px) {
+    .container-principal {
+        padding: 24px !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .container-principal {
+        padding: 32px !important;
+    }
+}

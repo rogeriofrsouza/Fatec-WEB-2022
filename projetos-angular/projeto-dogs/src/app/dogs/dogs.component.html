@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <div *ngIf="dogImage">
+      <img [src]="dogImage.url" alt="" class="img-fluid" />
+      <p class="text-center">Tamanho: {{ dogImage.fileSizeBytes }}</p>
+    </div>
+    <div *ngIf="dogVideo">
+      <video controls>
+        <source [src]="dogVideo.url" type="video/mp4">
+      </video>
+      <p class="text-center">Tamanho: {{ dogVideo.fileSizeBytes }}</p>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-primary mt-4" (click)="getDog()">Recarregar!</button>
+  </div>
+</div>

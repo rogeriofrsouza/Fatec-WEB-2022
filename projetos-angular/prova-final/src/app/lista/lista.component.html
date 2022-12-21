@@ -1,0 +1,55 @@
+<h1 class="text-center mt-4">Lista de carros</h1>
+
+<div class="container container-principal shadow p-3 mt-4">
+  <ul class="list-group list-group-flush">
+    <li 
+      class="list-group-item" 
+      [class.selected]="carro === selectedCarro" 
+      data-bs-toggle="modal" 
+      data-bs-target="#carroModal" 
+      (click)="selectCarro(carro)" 
+      *ngFor="let carro of carros"
+    >
+      <span class="badge bg-primary">{{carro.codigo}}</span> {{carro.modelo}}
+    </li>
+  </ul>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="carroModal" tabindex="-1" aria-labelledby="carroModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" *ngIf="selectedCarro">
+        <div class="form-floating">
+          <input type="number" name="codigo" class="form-control" id="floatingInputCode" [(ngModel)]="selectedCarro.codigo">
+          <label for="floatingInputCode">Código</label>
+        </div>
+
+        <div class="form-floating mt-3">
+          <input type="text" name="modelo" class="form-control" id="floatingInputModel" [(ngModel)]="selectedCarro.modelo">
+          <label for="floatingInputModel">Modelo</label>
+        </div>
+
+        <div class="form-floating mt-3">
+          <input type="number" name="preco" class="form-control" id="floatingInputPrice" [(ngModel)]="selectedCarro.preco">
+          <label for="floatingInputPrice">Preço</label>
+        </div>
+
+        <div class="form-floating mt-3">
+          <input type="date" name="ano" class="form-control" id="floatingInputYear" [(ngModel)]="selectedCarro.anoFabricacao">
+          <label for="floatingInputYear">Ano</label>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

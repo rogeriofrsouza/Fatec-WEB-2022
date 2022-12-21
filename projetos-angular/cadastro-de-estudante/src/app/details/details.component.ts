@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 import { debounceTime } from 'rxjs';
 import { Student } from 'src/app/shared/models/student.model';
@@ -33,7 +33,8 @@ export class DetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private studentService: StudentService,
     private teacherService: TeacherService,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe({
@@ -94,10 +95,15 @@ export class DetailsComponent implements OnInit {
       this.studentService.delete(this.student.id).subscribe({
         next: response => console.log(response)
       });
+
+      this.router.navigateByUrl('/students');
+
     } else {
       this.teacherService.delete(this.teacher.id).subscribe({
         next: response => console.log(response)
       });
+
+      this.router.navigateByUrl('/teachers');
     }
   }
 
